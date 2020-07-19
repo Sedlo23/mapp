@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sedlo.mapp1.Activity.MainActivity"
+    android:background="@android:color/black"
+    android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+    >
+
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:focusable="false"
+
+        />
+
+
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="293dp"
+        android:text="Profile" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="200dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoView1"
+        android:layout_marginTop="148dp"
+        android:text="LogIn" />
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="200dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:layout_marginTop="64dp"
+        android:text="SignUp" />
+
+
+    <com.john.waveview.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        app:above_wave_color="@color/Yellow"
+        app:blow_wave_color="@color/Yellow"
+        app:wave_height="large"
+        app:wave_hz="slow"
+        app:wave_length="large" />
+
+</RelativeLayout>

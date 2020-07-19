@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sedlo.mapp1.Tab.playerTabAbs">
+
+
+    <TextView
+        android:id="@+id/edittext_player_name_abs"
+        style="@style/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:editable="false"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <Switch
+        android:id="@+id/switch_abs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text=""
+        />
+
+
+</LinearLayout>

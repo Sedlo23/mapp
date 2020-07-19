@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sedlo.mapp1.Tab.playerTab"
+
+    >
+
+
+    <EditText
+        android:id="@+id/edittext_train_date"
+        style="@style/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textColor="@color/White" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+    <Button
+        android:id="@+id/btn_train_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="edit" />
+
+
+    <Button
+        android:id="@+id/btn_train_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_toEndOf="@+id/edittext_train_date"
+        android:text="delete" />
+
+    <Button
+        android:id="@+id/btn_train_showhide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABS" />
+    </LinearLayout>
+
+</LinearLayout>

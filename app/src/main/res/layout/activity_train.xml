@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:scrollbarAlwaysDrawVerticalTrack="true"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sedlo.mapp1.Activity.PlayersListActivity"
+    android:background="@android:color/black"
+    android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <Button
+        android:id="@+id/btn_new_tain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ New Training" />
+
+    <ListView
+        android:id="@+id/listview_train"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/tab_player"
+        android:dividerHeight="10dp"
+
+        >
+    </ListView>
+
+    <com.john.waveview.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:above_wave_color="@color/Yellow"
+        app:blow_wave_color="@color/Yellow"
+        app:wave_height="large"
+        app:wave_hz="slow"
+        app:wave_length="large" />
+
+
+
+</LinearLayout>

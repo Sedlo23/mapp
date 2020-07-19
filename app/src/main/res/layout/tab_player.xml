@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sedlo.mapp1.Tab.playerTab"
+    >
+
+
+    <EditText
+        android:id="@+id/edittext_player_name"
+        style="@style/editText"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="176dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textMultiLine"
+        android:text="Name" />
+
+    <Button
+        android:id="@+id/btn_player_info"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/btn_player_edit"
+        android:text="info" />
+
+
+    <Button
+        android:id="@+id/btn_player_edit"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/btn_player_delete"
+        android:text="edit" />
+
+    <Button
+        android:id="@+id/btn_player_delete"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="del" />
+
+
+
+</RelativeLayout>

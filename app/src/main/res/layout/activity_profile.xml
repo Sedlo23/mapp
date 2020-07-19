@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sedlo.mapp1.Activity.ProfileActivity"
+    android:background="@android:color/black"
+    android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+
+
+    <com.john.waveview.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        app:above_wave_color="@color/Yellow"
+        app:blow_wave_color="@color/Yellow"
+        app:wave_height="large"
+        app:wave_hz="slow"
+        app:wave_length="large" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Id"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                <TextView
+                    android:id="@+id/textViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="-1"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Username"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                <TextView
+                    android:id="@+id/textViewUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Email"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            </TableRow>
+        </TableLayout>
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="16dp"
+
+        android:text="Logout" />
+
+    <Button
+        android:id="@+id/btn_profile_players"
+        android:layout_width="128dp"
+        android:layout_height="94dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="163dp"
+        android:layout_marginBottom="443dp"
+        android:text="Players" />
+
+    <Button
+        android:id="@+id/btn_profile_train"
+        android:layout_width="128dp"
+        android:layout_height="91dp"
+        android:layout_below="@+id/btn_profile_players"
+        android:layout_alignStart="@+id/btn_profile_players"
+        android:layout_marginTop="-443dp"
+        android:text="Training" />
+
+
+</RelativeLayout>
