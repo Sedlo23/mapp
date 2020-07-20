@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +14,7 @@ import com.sedlo.mapp1.R;
 public class playerAbsTab extends AppCompatActivity
 {
     Switch sw;
-    EditText editText;
+    TextView editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

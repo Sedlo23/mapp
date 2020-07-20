@@ -80,30 +80,29 @@ public class SignUpActivity extends AppCompatActivity {
 
         //validations
         if (TextUtils.isEmpty(username)) {
-            editTextUsername.setError("Please enter username");
+            editTextUsername.setError(getString(R.string.invalid_login));
             editTextUsername.requestFocus();
             return;
         }
         if (TextUtils.isEmpty(email)) {
-            editTextEmail.setError("Please enter your email");
+            editTextEmail.setError(getString(R.string.invalid_login));
             editTextEmail.requestFocus();
             return;
         }
 
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editTextEmail.setError("Enter a valid email");
+            editTextEmail.setError(getString(R.string.invalid_login));
             editTextEmail.requestFocus();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            editTextPassword.setError("Enter a password");
+            editTextPassword.setError(getString(R.string.invalid_login));
             editTextPassword.requestFocus();
             return;
         }
 
-        //if it passes all the validations
-        //executing the async task
+
         RegisterUser ru = new RegisterUser(username,email,password);
         ru.execute();
     }
@@ -140,7 +139,7 @@ public class SignUpActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            Log.i("SignUp","sfdsds : "+s);
+            Log.i(getString(R.string.singin)," : "+s);
             //hiding the progressbar after completion
             progressBar.setVisibility(View.GONE);
             try {

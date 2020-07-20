@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:hint="Username"
+            android:hint="@string/username"
             android:textColor="@android:color/white"
             android:inputType="text" />
 
@@ -46,7 +46,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="sans-serif"
             android:textColor="@android:color/white"
-            android:hint="Password"
+            android:hint="@string/password"
 
             android:inputType="textPassword" />
 
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:text="Login" />
+            android:text="@string/login" />
 
         <TextView
             android:id="@+id/textViewRegister"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:text="Dont' have an account?\nRegister Here"
+            android:text="@string/newacc"
             android:textColor="@android:color/white"
             android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />

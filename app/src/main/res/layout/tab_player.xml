@@ -11,16 +11,16 @@
     <EditText
         android:id="@+id/edittext_player_name"
         style="@style/editText"
-        android:layout_width="235dp"
+        android:layout_width="177dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
-        android:layout_marginEnd="176dp"
+        android:layout_marginEnd="234dp"
         android:ems="10"
         android:enabled="false"
         android:inputType="textMultiLine"
-        android:text="Name" />
+        android:text="" />
 
     <Button
         android:id="@+id/btn_player_info"
@@ -33,19 +33,19 @@
 
     <Button
         android:id="@+id/btn_player_edit"
-        android:layout_width="62dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toStartOf="@+id/btn_player_delete"
-        android:text="edit" />
+        android:text="@string/edit" />
 
     <Button
         android:id="@+id/btn_player_delete"
-        android:layout_width="57dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:text="del" />
+        android:text="@string/delete" />
 
 
 

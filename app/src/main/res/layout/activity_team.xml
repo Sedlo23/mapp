@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sedlo.mapp1.Activity.PlayersListActivity"
+    tools:context="com.sedlo.mapp1.Activity.TeamsActivity"
     android:background="@android:color/black"
     android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -17,16 +17,16 @@
 
 
     <Button
-        android:id="@+id/btn_new_tain"
+        android:id="@+id/btn_new_team"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_tr" />
+        android:text="@string/add_team" />
 
     <ListView
-        android:id="@+id/listview_train"
+        android:id="@+id/listview_team"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/tab_player"
+        tools:listitem="@layout/tab_team"
         android:dividerHeight="10dp"
 
         >

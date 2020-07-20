@@ -27,7 +27,7 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="107dp"
         android:layout_marginTop="293dp"
-        android:text="Profile" />
+        android:text="" />
 
     <Button
         android:id="@+id/btn_login"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/videoView1"
         android:layout_marginTop="148dp"
-        android:text="LogIn" />
+        android:text="@string/login" />
 
     <Button
         android:id="@+id/btn_sign_up"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_login"
         android:layout_marginTop="64dp"
-        android:text="SignUp" />
+        android:text="@string/singin" />
 
 
     <com.john.waveview.WaveView

@@ -51,42 +51,42 @@ public class AbsActivity extends AppCompatActivity
 
 
 
-        prefManager = PrefManager.getInstance(this);
+            prefManager = PrefManager.getInstance(this);
 
-        mydatabase = openOrCreateDatabase(prefManager.getBDName(),MODE_PRIVATE,null);
+            mydatabase = openOrCreateDatabase(prefManager.getBDName(),MODE_PRIVATE,null);
 
-        prefManager.setMydatabase(mydatabase);
-
-
-
-        mydatabase.execSQL("CREATE TABLE IF NOT EXISTS  "+prefManager.getDbNameAbs()+ " (" +
-                "abs_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "p_id VARCHAR(255) NOT NULL, " +
-                "d_id INT NOT NULL, " +
-                "reason VARCHAR(255), " +
-                "FOREIGN KEY (d_id)" +
-                "REFERENCES trainings (id)" +
-                "ON DELETE CASCADE," +
-                "FOREIGN KEY (p_id)" +
-                "REFERENCES players (id)" +
-                "ON DELETE CASCADE" +
-                ");");
+            prefManager.setMydatabase(mydatabase);
 
 
 
-        listView = findViewById(R.id.listview_players_abs);
+            mydatabase.execSQL("CREATE TABLE IF NOT EXISTS  "+prefManager.getDbNameAbs()+ " (" +
+                    "abs_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "p_id VARCHAR(255) NOT NULL, " +
+                    "d_id INT NOT NULL, " +
+                    "reason VARCHAR(255), " +
+                    "FOREIGN KEY (d_id)" +
+                    "REFERENCES trainings (id)" +
+                    "ON DELETE CASCADE," +
+                    "FOREIGN KEY (p_id)" +
+                    "REFERENCES players (id)" +
+                    "ON DELETE CASCADE" +
+                    ");");
 
-        User user = PrefManager.getInstance(this).getUser();
 
-        Bundle bundle = getIntent().getExtras();
 
-        if(bundle.getString("date_id")!= null)
-        {
-            date_id=
-            bundle.getString("date_id");
-        }
+            listView = findViewById(R.id.listview_players_abs);
 
-       refreshList();
+            User user = PrefManager.getInstance(this).getUser();
+
+            Bundle bundle = getIntent().getExtras();
+
+            if(bundle.getString("date_id")!= null)
+            {
+                date_id=
+                bundle.getString("date_id");
+            }
+
+           refreshList();
 
 
     }

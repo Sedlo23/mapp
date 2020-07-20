@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sedlo.mapp1.UserConnection.PrefManager;
@@ -70,7 +71,7 @@ public class LoginActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 //open register screen
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
                 finish();
             }
         });
@@ -81,12 +82,12 @@ public class LoginActivity extends AppCompatActivity  {
         final String password = editTextPassword.getText().toString();
         //validating inputs
         if (TextUtils.isEmpty(username)) {
-            editTextUsername.setError("Please enter username");
+            editTextUsername.setError(getString(R.string.pls_you_us));
             editTextUsername.requestFocus();
             return;
         }
         if (TextUtils.isEmpty(password)) {
-            editTextPassword.setError("Please enter password");
+            editTextPassword.setError(getString(R.string.password));
             editTextPassword.requestFocus();
             return;
         }
@@ -136,7 +137,7 @@ public class LoginActivity extends AppCompatActivity  {
                     finish();
                     startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                 } else {
-                    Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.invalid_login), Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

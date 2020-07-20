@@ -147,7 +147,7 @@ public class playerAbsAdapter extends BaseAdapter
                         final String[] m_Text = new String[1];
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                        builder.setTitle("Reason");
+                        builder.setTitle(context.getString(R.string.reason));
 
 
                         final EditText input = new EditText(context);

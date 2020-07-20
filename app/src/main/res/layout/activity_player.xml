@@ -14,7 +14,7 @@
         android:id="@+id/btn_new_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+ New Player" />
+        android:text="@string/add_plazer" />
 
 
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">mapp1</string>
+    <string name="username">Uživatelské jméno</string>
+    <string name="password">Heslo</string>
+    <string name="players">Hráči</string>
+    <string name="add_plazer">+ Nový Hráč</string>
+    <string name="delete">Vymazat</string>
+    <string name="abs">absence</string>
+    <string name="add_tr">+ Nový trénink</string>
+    <string name="trainings">Tréninky</string>
+    <string name="singin">Registrace</string>
+    <string name="logout">Odhlášení</string>
+    <string name="login">Přihlášení</string>
+    <string name="newacc">Vytvořit nový účet?</string>
+    <string name="reason">Důvod</string>
+    <string name="pls_you_pass">Zadejte své heslo prosím</string>
+    <string name="pls_you_us">Zadejte své uživatelské jméno prosím</string>
+    <string name="invalid_login">Špatné přihlašovací údaje</string>
+    <string name="edit">Upravit</string>
+    <string name="add_team">+ Nový tým</string>
+    <string name="teams">Týmy</string>
+</resources>

@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.sedlo.mapp1.Activity.LoginActivity;
 import com.sedlo.mapp1.Activity.PlayersListActivity;
+import com.sedlo.mapp1.Activity.TeamsActivity;
 import com.sedlo.mapp1.Activity.TrainingsListActivity;
 
 public class PrefManager {
@@ -17,12 +18,16 @@ public class PrefManager {
     private static final String DB_NAME_PLAYERS= "players";
     private static final String DB_NAME_TRAININGS= "trainings";
     private static final String DB_NAME_ABS= "abs";
+    private static final String DB_NAME_TEAMS= "teams";
+
 
     private SQLiteDatabase mydatabase;
 
     private PlayersListActivity playersListActivity;
 
     private TrainingsListActivity trainingsListActivity;
+
+    private TeamsActivity teamsActivity;
 
     private static PrefManager mInstance;
 
@@ -116,5 +121,18 @@ public class PrefManager {
 
     public static String getDbNameAbs() {
         return DB_NAME_ABS;
+    }
+
+    public TeamsActivity getTeamsActivity() {
+        return teamsActivity;
+    }
+
+    public PrefManager setTeamsActivity(TeamsActivity teamsActivity) {
+        this.teamsActivity = teamsActivity;
+        return this;
+    }
+
+    public static String getDbNameTeams() {
+        return DB_NAME_TEAMS;
     }
 }

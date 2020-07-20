@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/edittext_train_date"
+        android:id="@+id/edittext_team_date"
         style="@style/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         android:layout_gravity="center">
 
     <Button
-        android:id="@+id/btn_train_edit"
+        android:id="@+id/btn_team_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -34,7 +34,7 @@
 
 
     <Button
-        android:id="@+id/btn_train_delete"
+        android:id="@+id/btn_team_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -42,11 +42,7 @@
         android:layout_toEndOf="@+id/edittext_train_date"
         android:text="@string/delete" />
 
-    <Button
-        android:id="@+id/btn_train_showhide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/abs" />
+
     </LinearLayout>
 
 </LinearLayout>

@@ -148,6 +148,8 @@ public class playerAdapter extends BaseAdapter
                 ArrayList<String> dates=new ArrayList<>();
                 ArrayList<String> reason=new ArrayList<>();
                 ArrayList<String> datesName=new ArrayList<>();
+                ArrayList<String> tm=new ArrayList<>();
+                ArrayList<String> teamsName=new ArrayList<>();
 
                 PrefManager prefManager= PrefManager.getInstance(context);
 
@@ -181,6 +183,8 @@ public class playerAdapter extends BaseAdapter
                         do {
 
                             datesName.add(cursor2.getString(1));
+                            tm.add(cursor2.getString(2));
+
 
                         }
                         while (cursor2.moveToNext());
@@ -188,19 +192,39 @@ public class playerAdapter extends BaseAdapter
                     }
 
 
+                }
+
+                for (String team:tm)
+                {
+
+                    Cursor cursor2 =   prefManager.getMydatabase().rawQuery("Select * from "+prefManager.getDbNameTeams()+" WHERE id = '" + team+"'",null);
+
+                    cursor2.moveToFirst();
+
+                    if(cursor2 != null && cursor2.moveToFirst())
+                    {
+                        do {
+
+                            teamsName.add(cursor2.getString(1));
+
+                        }
+                        while (cursor2.moveToNext());
+
+                    }
+
 
                 }
+
 
                 AlertDialog.Builder builderSingle = new AlertDialog.Builder(context);
 
                 final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(context, android.R.layout.select_dialog_item);
-                arrayAdapter.add("Total missed: "+datesName.size());
+                arrayAdapter.add(context.getString(R.string.abs)+": "+datesName.size());
 
 
                 for (int i= 0;i<datesName.size();i++)
                 {
-
-                    arrayAdapter.add(datesName.get(i)+"\n  -->"+
+                    arrayAdapter.add(datesName.get(i)+ " (" + teamsName.get(i)+")\n  -->"+
                             reason.get(i));
                 }
 

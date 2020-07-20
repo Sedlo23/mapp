@@ -29,6 +29,7 @@
         <activity android:name=".Activity.PlayersListActivity" />
         <activity android:name=".Activity.TrainingsListActivity" />
         <activity android:name=".Activity.AbsActivity" />
+        <activity android:name=".Activity.TeamsActivity" />
     </application>
 
 </manifest>

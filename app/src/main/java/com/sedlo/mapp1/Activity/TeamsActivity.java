@@ -11,9 +11,9 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.sedlo.mapp1.R;
-import com.sedlo.mapp1.SedloQL.Player;
+import com.sedlo.mapp1.SedloQL.Team;
 import com.sedlo.mapp1.SedloQL.Train;
-import com.sedlo.mapp1.Tab.playerAdapter;
+import com.sedlo.mapp1.Tab.teamAdapter;
 import com.sedlo.mapp1.Tab.trainAdapter;
 import com.sedlo.mapp1.UserConnection.PrefManager;
 
@@ -21,38 +21,25 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class TrainingsListActivity extends AppCompatActivity
+public class TeamsActivity extends AppCompatActivity
 {
     ListView listView;
-
-    String team;
-
     SQLiteDatabase mydatabase;
-
-    Button buttonNewPlayer;
-
+    Button buttonNewTeam;
     PrefManager prefManager;
 
-    ArrayList<Train> trainArrayList;
+    ArrayList<Team> teamArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_train);
+        setContentView(R.layout.activity_team);
 
         getWindow().setFormat(PixelFormat.TRANSLUCENT);
 
-        trainArrayList =new ArrayList<>();
-
-        Bundle bundle = getIntent().getExtras();
-
-        if(bundle.getString("team")!= null)
-        {
-            team=bundle.getString("team");
-        }
-
+        teamArrayList =new ArrayList<>();
 
         init();
 
@@ -63,9 +50,9 @@ public class TrainingsListActivity extends AppCompatActivity
     void init()
     {
 
-        listView = findViewById(R.id.listview_train);
+        listView = findViewById(R.id.listview_team);
 
-        buttonNewPlayer = findViewById(R.id.btn_new_tain);
+        buttonNewTeam = findViewById(R.id.btn_new_team);
 
         prefManager = PrefManager.getInstance(this);
 
@@ -73,22 +60,20 @@ public class TrainingsListActivity extends AppCompatActivity
 
         prefManager.setMydatabase(mydatabase);
 
+        mydatabase.execSQL("CREATE TABLE IF NOT EXISTS "+prefManager.getDbNameTeams()+"(id INTEGER PRIMARY KEY AUTOINCREMENT ,name varchar(255) NOT NULL);");
 
-
-        mydatabase.execSQL("CREATE TABLE IF NOT EXISTS "+prefManager.getDbNameTrainings()+"(id INTEGER PRIMARY KEY AUTOINCREMENT ,date varchar(255) NOT NULL,team varchar(255) NOT NULL, FOREIGN KEY (team) REFERENCES teams(id) ON DELETE CASCADE);");
-
-        buttonNewPlayer.setOnClickListener(new View.OnClickListener() {
+        buttonNewTeam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.");
-                String currentDateandTime = sdf.format(new Date());
-              mydatabase.execSQL("INSERT INTO "+prefManager.getDbNameTrainings()+" VALUES(NULL,'"+ currentDateandTime+" ','"+ team+"');");
+
+              mydatabase.execSQL("INSERT INTO "+prefManager.getDbNameTeams()+" VALUES(NULL,'New Team');");
               refreshList();
             }
         });
 
-        prefManager.setTrainingsListActivity(this);
+        prefManager.setTeamsActivity(this);
 
     }
 
@@ -96,20 +81,20 @@ public class TrainingsListActivity extends AppCompatActivity
     public void refreshList()
     {
 
-        Cursor cursor = mydatabase.rawQuery("Select * from "+prefManager.getDbNameTrainings() +" WHERE team = '"+team+"'",null);
+        Cursor cursor = mydatabase.rawQuery("Select * from "+prefManager.getDbNameTeams(),null);
 
         cursor.moveToFirst();
 
-        trainArrayList =new ArrayList<>();
+        teamArrayList =new ArrayList<>();
 
 
-        trainAdapter trainAdapter=new trainAdapter(this, trainArrayList);
+        teamAdapter trainAdapter=new teamAdapter(this, teamArrayList);
 
 
         if(cursor != null && cursor.moveToFirst())
         {
             do {
-                trainArrayList.add(new Train(cursor.getString(1),cursor.getString(0)));
+                teamArrayList.add(new Team(cursor.getString(1),cursor.getString(0)));
             }
             while (cursor.moveToNext());
 
