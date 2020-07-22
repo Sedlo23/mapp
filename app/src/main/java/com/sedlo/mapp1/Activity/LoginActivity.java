@@ -26,7 +26,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-import static com.sedlo.mapp1.R.id.videoViewL;
+
 
 public class LoginActivity extends AppCompatActivity  {
 
@@ -35,20 +35,8 @@ public class LoginActivity extends AppCompatActivity  {
     @Override
     protected void onResume() {
         super.onResume();
-        VideoView v = (VideoView) findViewById(videoViewL);
-        v.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.logo));
 
-
-        v.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
-
-        v.start();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

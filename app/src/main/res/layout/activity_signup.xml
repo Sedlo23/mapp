@@ -21,15 +21,14 @@
         app:wave_length="large" />
 
 
-    <VideoView
-        android:id="@+id/videoViewS"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="140dp"
+        android:layout_height="144dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:focusable="false"
 
-        />
+        app:srcCompat="@mipmap/logo" />
 
     <LinearLayout
         android:layout_width="match_parent"

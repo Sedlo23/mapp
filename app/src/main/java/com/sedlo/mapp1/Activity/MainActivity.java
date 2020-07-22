@@ -20,7 +20,7 @@ import com.john.waveview.WaveView;
 import com.sedlo.mapp1.UserConnection.PrefManager;
 import com.sedlo.mapp1.R;
 
-import static com.sedlo.mapp1.R.id.videoView1;
+
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -31,17 +31,6 @@ public class MainActivity extends AppCompatActivity  {
     protected void onResume() {
 
         super.onResume();
-        VideoView v = (VideoView) findViewById(videoView1);
-        v.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.logo));
-
-        v.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
-
-        v.start();
 
 
     }
@@ -54,18 +43,7 @@ public class MainActivity extends AppCompatActivity  {
 
         getWindow().setFormat(PixelFormat.TRANSLUCENT);
 
-        VideoView v = (VideoView) findViewById(videoView1);
-        v.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.logo));
 
-
-        v.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
-
-        v.start();
 
         final WaveView waveView =(WaveView)findViewById(R.id.waveView);
 

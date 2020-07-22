@@ -25,7 +25,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.HashMap;
 
-import static com.sedlo.mapp1.R.id.videoViewS;
+
 
 public class SignUpActivity extends AppCompatActivity {
     EditText editTextUsername, editTextEmail, editTextPassword;
@@ -33,18 +33,7 @@ public class SignUpActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        VideoView v = (VideoView) findViewById(videoViewS);
-        v.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.logo));
 
-
-        v.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
-
-        v.start();
     }
 
     @Override
